@@ -19,11 +19,10 @@ embed{display:block; margin:0 auto}
 h3,h4,h5,h6,p{padding-left: 15px;}
 
 h1{background-color:#c695ba; color:#272838;}
-.ulnp{padding-left:0;}
+a{padding-left: 15px; color:#335770; text-decoration:none;}
+a:visited{padding-left: 15px; color: #774069; text-decoration:none;}
+a:hover{padding-left: 15px; text-decoration:none; font-size:1.5em; color:#c695ba;}
 .nav{padding-left:0; padding-bottom: 2em; background-color:#f8f7ff; display:flex; list-style:none; justify-content:space-evenly;}
-a{color:#335770; text-decoration:none;}
-a:visited{color: #774069; text-decoration:none;}
-a:hover{text-decoration:none; font-size:1.5em; color:#c695ba;}
 footer{position:fixed; bottom:0; left:0; width:100%; text-align:center; background-color:#335770; color:#f8f7ff;}
 .performative{flex:1; width:25%; display:block; margin: auto;}
 .center{text-align:center;}
