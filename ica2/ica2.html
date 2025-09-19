@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <style>
+        .card{flex:1 1 300px; max-width:450px; background-color: #c695ba; border-radius: 10px;}
+        .card-header{padding:10px; display:flex; justify-content:space-between; align-items:center; background-color: #774069; border-top-right-radius: 10px; border-top-left-radius: 10px; color:#f8f7ff;}
+        .expand-btn{width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:50%; background-color:#f8f7ff; font-size: 18px; color:#272838;}
+        .summaryCollapsed{padding-bottom:5px; padding-top:10px; padding-left:10px; color:#272838; transition: padding-bottom .33s ease;}
+        .summaryExpanded{padding-bottom:0px; padding-top:10px; padding-left:10px; color:#272838;}
+        .details{padding-left:10px; padding-bottom:10px; color:#272838; max-height:0; overflow: hidden; transition: max-height .33s ease;}
+        .detailsOpen{max-height: 300px;}
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+        <div class="card-header">
+            <h3>Community Garden Project</h3>
+            <button class="expand-btn" aria-label="Expand card">+</button>
+        </div>
+
+        <div class="card-content">
+            <p class="summaryCollapsed">Join neighbors in creating a shared growing space...</p>
+            <div class="details">
+            <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+            <p>Contact: garden@community.org</p>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+    const button = document.querySelector('.expand-btn');
+    const details = document.querySelector('.details');
+    const summary = document.querySelector('.summaryCollapsed');
+
+    button.addEventListener('click', function() {
+        details.classList.toggle('detailsOpen');
+        summary.classList.toggle('summaryExpanded');
+        if (details.classList.contains('detailsOpen')){button.textContent='-'; button.setAttribute('aria-label', 'Collapse card');} 
+        else{button.textContent= '+'; button.setAttribute('aria-label', 'Expand card');};
+    });
+</script>
+</body>
+</html>

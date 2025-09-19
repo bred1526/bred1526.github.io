@@ -1,0 +1,5 @@
+* {padding:0; margin:0;}
+
+nav{display: flex; justify-content:space-between; padding: 1em; background-color: bisque;}
+
+.nav-menu{display:flex; gap:4vw}
