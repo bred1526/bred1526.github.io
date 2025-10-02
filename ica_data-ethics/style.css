@@ -1,0 +1,205 @@
+* {padding:0; margin:0;}
+body{background-color: #E5C2C0;}
+#theme{display:flex; justify-content:center; width:70%; height: 30px; align-items: center;}
+.theme-button{display:flex;justify-content: center;}
+a:hover{background-color: #ffffff; color: #8E3B46; text-decoration:none;}
+a:visited{color:#E5C2C0;}
+a:visited:hover{background-color:#E5C2C0; color:#000000;}
+a{color:#FFFFFF;}
+p{padding-bottom: 35px; padding-left:20px;}
+h3{padding-left: 20px; padding-bottom:1rem;}
+h4{padding-left: 20px;}
+h5{padding-left: 20px;}
+ul{padding-left: 20px;}
+
+.light{background-color: #E5C2C0;}
+.dark{background-color: #8E3B46;}
+
+
+.page-grid{
+    display:grid;
+    grid-template-columns:2fr .5fr;
+    grid-template-rows: .25fr 2fr;
+    grid-template-areas: 
+    "page-title page-title"
+    "page-content sidebar"
+    ;
+}
+
+.centered{
+    display:flex;
+    padding-left:0px;
+    margin-left:0px;
+    padding-right:0px;
+    margin-right:0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-title{
+    grid-area:page-title;
+    grid-column: span 2;
+    /* border: 2px solid black; */
+}
+
+#about-content{
+    grid-area: page-content;
+    /* border: 2px solid black; */
+}
+
+#about-contact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: sidebar;
+    border: 2px dotted black;
+    padding:10px;
+}
+
+#about-contact:hover{
+    background-image: url('img/white_headphone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+}
+
+#contact-expand-button{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #8E3B46;
+    width:80%;
+    color:#FFFFFF;
+    border-radius: 25px;
+}
+
+#contact-expand-button:hover{
+    font-size: .9rem;
+    width:85%;
+    background-color: #0A6145;
+    color:white;
+}
+
+.modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.contact-modal-content{
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 3px solid #0A6145;
+  width: 80%; 
+}
+
+.close-modal{
+  color: #0A6145;
+  background-color: rgba(0,0,0,0);
+  border: 0px solid rgba(0,0,0,0);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#community-card-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "Forum Forum" 
+    "Reddit Discord"
+    ;
+}
+
+#reddits{
+    grid-area:Reddit;
+}
+
+#discords{
+    grid-area:Discord;
+}
+
+#forums{
+    grid-area:Forum;
+}
+
+footer{position:fixed; bottom:0; width:100%; text-align:center; background-color:#0A6145; color:#FFFFFF; padding:5px;}
+
+.important-text{color: #8E3B46; text-decoration:underline;}
+.brand-header{display:flex; justify-content: space-between; padding:1em; background-color: #8E3B46; align-items: center; color:#FFFFFF;}
+.main-nav{display: flex; justify-content:space-between; background-color: #733039f6; color:#ffffff; padding-left: 1em; padding-right: 1.65em; height:50px; align-items:center;}
+.nav-title{display:flex; justify-content: center; align-items: center;}
+.nav-menu{display:flex; gap:4vw; list-style:none; align-items: center;}
+.page{display:flex; flex-direction:column; background-color:#E5C2C0}
+.more-space{padding-bottom: 50px;}
+.lists li p{padding:5px;}
+.lists{list-style: none; padding-bottom:35px;}
+
+.titles{padding:0px; text-align:center; padding-top:20px; padding-bottom:20px;}
+
+.card-container{display:flex; flex-direction: column; gap:20px;}
+.learning-card{padding:0; margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#FFFFFF;}
+.learning-card h3{padding:0; margin:0;}
+.learning-card h4{padding:0; margin:0; font-size:1.5rem; text-align:center; padding-top:2em;}
+.learning-card h5{padding:0; margin:0; padding-left:.75em; padding-bottom:1em; padding-top:1em; font-size:1.25rem;}
+.learning-card p{padding:0; margin:0; font-size: .75rem;}
+.learning-card a{padding:0; padding-left:2em; padding-right:2em;}
+.learning-card-toggle{background-color: #733039f6; color:#ffffff; border:2px solid #431c21; padding:1em; width:80%}
+.card-description{width: 80%; background-color: #8E3B46; max-height:10000px; transition: max-height .5s; overflow: hidden; padding-bottom:25px;}
+.learning-card.card-description-closed .card-description{max-height:0px; padding:0px;}
+.learning-card:not(.card-description-closed) .learning-card-toggle{background-color: #ffffffff; color:#733039f6;}
+.learning-card.card-description-closed .learning-card-toggle{background-color: #733039f6; color:#ffffff; border:2px solid #431c21; padding:1em; width:80%}
+
+
+
+@media (max-width:925px){
+    .nav-menu{display:none;}
+    .burger{display:flex; background-color:#ffffff; width:30px; height:30px; gap:3.5px; flex-direction:column; align-items: center; justify-content: center;}
+    .burger span{background-color: #000000; height:2px; width:15px;}
+}
+
+@media (min-width:925px){
+    /* .nav-menu{display:flex; gap:4vw; list-style-type:none;} */
+    .burger{display:none;}
+    .nav-vertical{max-height:0 !important; padding:0 !important;}
+}
+
+.toggle-span-hide{display:none !important;}
+.toggle-span{display:flex;}
+
+
+.nav-vertical-closed{
+    padding-top:0px; 
+    padding-bottom:0px; 
+    display:flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #8E3B46; 
+    overflow:hidden; 
+    max-height:0px; 
+    transition:max-height .33s ease, padding-top .33s ease, padding-bottom .33s ease;}
+
+.nav-vertical{
+    max-height:300px; 
+    padding-top:20px; 
+    padding-bottom:20px;}
+
+.nav-menu-vertical{padding:0px; list-style:none; display:flex; flex-direction:column; gap:15px;}
+.nav-menu-vertical a{display:block; text-align:center;}
