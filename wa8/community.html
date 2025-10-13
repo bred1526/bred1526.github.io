@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Author: B.E. Braden Edwards, A web page dedicate to providing community resources for new music producers.">
+    <title>Community</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="brand-header">
+        <h1>Track Starter</h1>
+
+
+        <form class="log-in">
+            <label for="nameInput">Enter your name:</label><br>
+            <input type="text" id="nameInput" name="userName"><br>
+            <input type="submit" value="Log In">
+        </form>
+
+        <div class="name-display">
+            <p id="username"></p><br>
+            <button id="log-out">Log Out</button>
+        </div>
+
+        <img src="img/logo.webp" alt="TrackStarter Logo" height="100">
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-title">Site Directory:</div>
+
+        <button class="burger" aria-label="Open navigation menu">
+                <span class="toggle-span"></span>
+                <span class="toggle-span"></span>
+                <span></span>
+        </button>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="learning.html">Learning Resources</a></li>
+            <li><a href="hardware_software.html">Hardware & Software Resources</a></li>
+            <li><a href="community.html">Community Resources</a></li>
+        </ul>
+    </nav>
+
+    <nav class= "nav-vertical-closed">
+        <ul class="nav-menu-vertical">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="learning.html">Learning Resources</a></li>
+            <li><a href="hardware_software.html">Hardware & Software Resources</a></li>
+            <li><a href="community.html">Community Resources</a></li>
+        </ul>
+    </nav>
+
+    <section class="page">
+
+    <div class="theme-button">
+    <button id="theme" type="button">Theme</button>
+    </div>
+
+        <h2 class="titles">Community</h2>
+        <h3 class="centered">Resources</h3>
+          
+    <section class="card-container more-space" id="community-card-container">    
+        <div class="learning-card card-description-closed" id="reddits">
+
+                <button class="learning-card-toggle" aria-label="Open Card">
+
+                    Reddit Links
+
+                </button>
+
+
+                <div class="card-description">
+
+                    <h4>r/</h4>
+                        <h5>WeAreTheMusicMakers (WATMM)</h5>
+                            <a href="https://www.reddit.com/r/WeAreTheMusicMakers/?utm ">We Are The Music Makers</a>
+                        <h5>edmproduction</h5>
+                            <a href="reddit.com/r/edmproduction">EDM Production</a>
+                        
+                </div>
+
+        </div>
+
+        <div class="learning-card card-description-closed" id="discords">
+
+                <button class="learning-card-toggle" aria-label="Open Card">
+
+                    Discord Links
+
+                </button>
+
+
+                <div class="card-description">
+
+                    <h4>.gg</h4>
+                        <h5>Electronic Music Production & Performance (EDMP)</h5>
+                            <a href="https://discord.com/invite/edmp?utm ">Electronic Music Discord</a>
+
+                        <h5>Music Production</h5>
+                            <a href="https://discord.com/invite/musicproduction?utm ">Music Production Discord</a>
+                        
+                </div>
+
+        </div>
+
+        <div class="learning-card card-description-closed" id="forums">
+
+                <button class="learning-card-toggle" aria-label="Open Card">
+
+                    Forum Links
+
+                </button>
+
+
+                <div class="card-description">
+
+                    <h4>.com</h4>
+                        <h5>KVR Audio</h5>
+                            <a href="https://www.kvraudio.com/?utm ">KRV Audio</a>
+                        
+                        <h5>Gearspace</h5>
+                            <a href="https://gearspace.com/board/career-work/?utm">Gearspace</a>
+                        
+                </div>
+        </div>
+
+
+
+
+
+        </section>
+    </section>
+
+    <footer>
+        2025 - Track Starter
+    </footer>
+
+    <script src="script.js" defer>
+        // var contactModal = document.getElementById("contact-modal");
+        // var modalButton = document.getElementById("contact-expand-button");
+        // var closeContactModal = document.getElementsByClassName("close-modal")[0];
+
+        // modalButton.onclick = function(){
+        //     contactModal.style.display = "block";
+        // }
+
+        // closeContactModal.onclick = function(){
+        // contactModal.style.display = "none";
+        // }
+        
+    </script>
+</body>
+</html>
