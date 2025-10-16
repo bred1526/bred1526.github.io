@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .box {
+            height:200px;
+            width:200px;
+            border: 5px black solid;
+            background-color: red;
+            animation-name: moving-box;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            position: relative;
+        } */
+
+
+
+
+        /* .another-box {
+            height:200px;
+            width:200px;
+            border: 5px black solid;
+            background-color: blue;
+            transition-property: width height background-color border-width;
+            transition-duration: 1s;
+            border-radius: 0px;
+        }
+
+        .another-box:hover {
+            width:500px;
+            height: 500px;
+            background-color: purple;
+            border-radius: 500px;
+        } */
+
+        @keyframes moving-box {
+            from {
+                left:0px;
+                top:0px;
+                background-color: red;
+            }
+
+            25% {
+                left:500px;
+                top:0px;
+                background-color: blue;
+            }
+
+            50% {
+                left:500px;
+                top:500px;
+                background-color: green;
+            }
+
+            75% {
+                left: 0px;
+                top:500px;
+                background-color: yellow;
+            }
+
+            to {
+                left:0px;
+                top:0px;
+                background-color: red;
+            }
+        }
+
+        .micro-button {
+            display: flex; 
+            justify-self: center; 
+            font-size: 50px; 
+            border-radius: 10px; 
+            border: 2px black solid; 
+            transition-property: font-size border; 
+            transition-duration: .33s;
+        }
+
+
+
+        .micro-button:hover {font-size: 55px;}
+
+        .load-animation {
+            display: block;
+            height: 20px; 
+            width: 20px;
+            background-color: red;
+            border: 2px black solid;
+            border-radius: 50px;
+            animation-name: loading-animation;
+            animation-duration: 2s;
+            animation-iteration-count: 5;
+            position:relative;
+        }
+
+
+
+        @keyframes loading-animation {
+            from{
+                left:0%;
+            }
+
+            50% {
+                left:100%;
+            }
+            to{
+                left:0%;
+            }
+        }
+ 
+
+        .hide{display:none;}
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+    </div>
+
+    <div class="another-box">
+
+    </div>
+
+    <button class="micro-button">Load</button>
+
+    <div class="load-animation hide"></div>
+
+    <script>
+
+        const animation = document.querySelector('.load-animation')
+        const button = document.querySelector('.micro-button').addEventListener('click', function(){
+            animation.classList.toggle('hide')
+        })
+
+    </script>
+</body>
+</html>
