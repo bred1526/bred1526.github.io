@@ -122,7 +122,8 @@ html {
     bottom:0; 
     width:100%; 
     text-align:center; 
-    background-color:#0a3d61; color:#FFFFFF; padding:5px;}
+    background-color:#0a3d61; color:#FFFFFF; padding:5px;
+  }
 
   @media screen and (max-width: 600px) {
     .app {
