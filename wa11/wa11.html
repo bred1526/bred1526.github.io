@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="wa11.css">
 </head>
 <body>
 
-    <label>
-        <input type="radio" name="topic" value="music"> Music News
-    </label><br>
+<div class="app">
 
-    <label>
-        <input type="radio" name="topic" value="movies"> Movie News
-    </label><br>
+    <h1>Pop Culture News</h1>
+   
+   <div class="labels">
+        <label id="mu">
+            <input type="radio" name="topic" value="music"> Music News
+        </label><br>
 
-    <label>
-        <input type="radio" name="topic" value="gaming"> Gaming News
-    </label><br>
+        <label id="mo">
+            <input type="radio" name="topic" value="movies"> Movie News
+        </label><br>
 
-    <label>
-        <input type="radio" name="topic" value="celebrity"> Celebrity News
-    </label><br>
+        <label id="ga">
+            <input type="radio" name="topic" value="gaming"> Gaming News
+        </label><br>
+
+        <label id="ce">
+            <input type="radio" name="topic" value="celebrity"> Celebrity News
+        </label><br>
+    </div>
 
 
     <button class="get-news">
@@ -29,6 +36,8 @@
     </button>
 
     <div class="display"></div>
+
+</div>
 
     <script src="wa11.js"></script>
 </body>

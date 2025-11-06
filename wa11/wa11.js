@@ -144,7 +144,7 @@ console.log("filter json test: " + json);
 function displayText(json){
     display.innerHTML = `
     <h2>Title</h2>
-    <h3>${json.title}</h3>
+    <p>${json.title}</p>
 
     <br>
 
@@ -159,7 +159,7 @@ function displayText(json){
     <br>
     <br>
 
-    <h2>Content</h2>
+    <h2>Content Preview:</h2>
     <p>${json.content}</p>
     `;
 }
