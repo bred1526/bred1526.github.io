@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wa12.css">
+</head>
+<body>
+
+<div class="app">
+
+    <h1>Pop Culture News</h1>
+   
+   <div class="labels">
+            <label aria-label="Music Filter Select" id="mu">
+                <input type="radio" name="topic" value="music"> Music News
+            </label><br>
+
+            <label aria-label="Movie Filter Select" id="mo">
+                <input type="radio" name="topic" value="movies"> Movie News
+            </label><br>
+
+            <label aria-label="Gaming Filter Select" id="ga">
+                <input type="radio" name="topic" value="gaming"> Gaming News
+            </label><br>
+
+            <label aria-label="Celebrity Filter Select" id="ce">
+                <input type="radio" name="topic" value="celebrity"> Celebrity News
+            </label><br>
+    </div>
+
+
+    <button aria-label="Get News Button" class="get-news">
+        Get News
+    </button>
+<br>
+    <button aria-label="Save Button" class="save-news">
+        Save News
+    </button>
+<br>
+    <button aria-label="Load Saved News Button" class="load-news">
+        Load Saved News
+    </button>
+
+    <div aria-label="Info Box" class="display"></div>
+
+</div>
+
+    <script src="wa12.js"></script>
+</body>
+</html>
