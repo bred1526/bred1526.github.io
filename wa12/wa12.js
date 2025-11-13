@@ -148,7 +148,7 @@ console.log("filter json test: " + json);
     }while(found == false && counter < 100)
 
     console.log("position= " + position);
-    
+
     currentArticle = json.articles[position] || "";
     displayText(json.articles[position]) || "";
 
@@ -211,35 +211,43 @@ for(i=0; i<saveArr.length; i++)
     localStorage.setItem('saveArr', JSON.stringify(saveArr));
     
     console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
+
+
 }
 
 
 
 function loadArticle(){
     
+    let json = JSON.parse(localStorage.getItem("articleArr")) || [];
+
     for(i=0; i<joke_arr.length ;i++)
     {
-    display.innerHTML = `
-    <h2>Title</h2>
-    <p>${json.title}</p>
+        display.innerHTML = `
+        <h2>Title</h2>
+        <p>${json.title}</p>
 
-    <br>
+        <br>
 
-    <h2>Description</h2>
-    <p>${json.description}</p>
+        <h2>Description</h2>
+        <p>${json.description}</p>
 
-    <br>
+        <br>
 
-    <h2>Link</h2>
-    <a href=${json.url}>Web Link</a>
+        <h2>Link</h2>
+        <a href=${json.url}>Web Link</a>
 
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <h2>Content Preview:</h2>
-    <p>${json.content}</p>
-    `;
+        <h2>Content Preview:</h2>
+        <p>${json.content}</p>
+        `;
     }
+}
 
 
+
+function clearStorage(){
+    localStorage.setItem("articleArr", []);
 }

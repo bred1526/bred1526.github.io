@@ -50,6 +50,30 @@ button{
     border-radius: 7px;
 }
 
+.save-news{
+    background-color: #5b9f36;
+}
+
+.save-news:hover{
+    background-color: #49812b;
+}
+
+.load-news{
+    background-color: rgb(154, 78, 189);
+}
+
+.load-news:hover{
+    background-color: rgb(124, 63, 152);
+}
+
+.clear-news{
+    background-color: #ec484a;
+}
+
+.clear-news:hover{
+    background-color: #bf3b3d;
+}
+
 .app{
     background-color: white; 
     display: flex; 
