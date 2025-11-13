@@ -211,8 +211,6 @@ for(i=0; i<saveArr.length; i++)
     localStorage.setItem('saveArr', JSON.stringify(saveArr));
     
     console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
-
-
 }
 
 
@@ -220,34 +218,62 @@ for(i=0; i<saveArr.length; i++)
 function loadArticle(){
     
     let json = JSON.parse(localStorage.getItem("articleArr")) || [];
+    const node = document.createElement("div");
 
-    for(i=0; i<joke_arr.length ;i++)
+    for(i=0; i<json.length ;i++)
     {
-        display.innerHTML = `
+
+        const textNode = document.createTextNode(`
         <h2>Title</h2>
-        <p>${json.title}</p>
+        <p>${json[i].title}</p>
 
         <br>
 
         <h2>Description</h2>
-        <p>${json.description}</p>
+        <p>${json[i].description}</p>
 
         <br>
 
         <h2>Link</h2>
-        <a href=${json.url}>Web Link</a>
+        <a href=${json[i].url}>Web Link</a>
 
         <br>
         <br>
 
         <h2>Content Preview:</h2>
-        <p>${json.content}</p>
-        `;
+        <p>${json[i].content}</p>
+        `);
+
+        node.appendChild(textNode);
+        
+
+        // display.innerHTML = `
+        // <h2>Title</h2>
+        // <p>${json.title}</p>
+
+        // <br>
+
+        // <h2>Description</h2>
+        // <p>${json.description}</p>
+
+        // <br>
+
+        // <h2>Link</h2>
+        // <a href=${json.url}>Web Link</a>
+
+        // <br>
+        // <br>
+
+        // <h2>Content Preview:</h2>
+        // <p>${json.content}</p>
+        // `;
     }
 }
 
-
+const clearButton = document.querySelector(".clear-news").addEventListener('click', clearStorage);
 
 function clearStorage(){
     localStorage.setItem("articleArr", []);
+    console.log("Storage Cleared:");
+    console.log(localStorage.getItem("articleArr"))
 }

@@ -1,6 +1,8 @@
 *{
     padding:0px;
     margin:0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
 }
 
 h1{
@@ -9,11 +11,16 @@ h1{
     padding-bottom: 1rem;
     padding-top: 1rem;
     display:flex;
+    font-weight:800;
     justify-content: center;
     transition: font-size 1s;
 }
 
 h1:hover{font-size: 40px;}
+
+h2{
+    font-weight: 700;
+}
 
 body{background-image: url(img/paper.webp);
 display: flex;
