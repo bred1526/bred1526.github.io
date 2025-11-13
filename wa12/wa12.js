@@ -48,10 +48,25 @@ console.log("filter json test: " + json);
 
     let found = false;
     let counter = 0;
-    let position = 0;
+    // let position = 0;
+
+    const getRandomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min)
+    }
+    
+    let position = getRandomNumber(0, 99);
+
+
+    console.log(position);
+
 
     do{
-        let combined = (json.articles[counter].description + " " + json.articles[counter].title).toLocaleLowerCase();
+
+        if (position > 99){
+            position = 0;
+        }
+
+        let combined = (json.articles[position].description + " " + json.articles[position].title).toLocaleLowerCase();
         console.log(combined);
 
         //topics filter
@@ -68,10 +83,10 @@ console.log("filter json test: " + json);
                 }
             }
             
-            if(found==true){
-                position = counter;
-                console.log("position= " + position);
-            }
+            // if(found==true){
+            //     position = counter;
+            //     console.log("position= " + position);
+            // }
         }
         else if(topic.value == "movies"){//Movie Filter
             console.log("topic is movies");
@@ -86,10 +101,10 @@ console.log("filter json test: " + json);
                 }
             }
             
-            if(found==true){
-                position = counter;
-                console.log("position= " + position);
-            }
+            // if(found==true){
+            //     position = counter;
+            //     console.log("position= " + position);
+            // }
         }
         else if(topic.value == "gaming"){//Gaming Filter
             console.log("topic is gaming");
@@ -104,10 +119,10 @@ console.log("filter json test: " + json);
                 }
             }
             
-            if(found==true){
-                position = counter;
-                console.log("position= " + position);
-            }
+            // if(found==true){
+            //     position = counter;
+            //     console.log("position= " + position);
+            // }
         }
         else if(topic.value == "celebrity"){//Celebrity Filter
             console.log("topic is celebrity");
@@ -122,16 +137,18 @@ console.log("filter json test: " + json);
                 }
             }
             
-            if(found==true){
-                position = counter;
-                console.log("position= " + position);
-            }
+            // if(found==true){
+            //     position = counter;
+            //     console.log("position= " + position);
+            // }
         }
 
-        counter++;        
+        counter++;  
+        position++;      
     }while(found == false && counter < 100)
 
-
+    console.log("position= " + position);
+    
     currentArticle = json.articles[position] || "";
     displayText(json.articles[position]) || "";
 
@@ -184,11 +201,16 @@ function saveArticle(){
     // console.log(joke_arr[0].setup);
     // console.log(joke_arr[0].punchline);
     
+for(i=0; i<saveArr.length; i++)
+{
+    console.log("save position:" + i);
+    console.log(saveArr[i]);
+}
 
-    localStorage.setItem('jokeArr', JSON.stringify(saveArr));
+
+    localStorage.setItem('saveArr', JSON.stringify(saveArr));
     
-    console.log(localStorage.getItem("jokeArr"));
-    loadArticle();
+    console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
 }
 
 
