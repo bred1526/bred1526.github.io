@@ -5,7 +5,22 @@
     font-weight: 500;
 }
 
+header{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display:flex;
+    font-weight:800;
+    justify-content: center;
+    transition: font-size 1s;
+    font-size: 30px;
+}
+
+header:hover{font-size: 40px;}
+
 h1{
+    font-size: 30px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 1rem;
@@ -60,7 +75,7 @@ button{
 }
 
 .save-news{
-    background-color: #5b9f36;
+    background-color: #477c2b;
 }
 
 .save-news:hover{
@@ -76,7 +91,7 @@ button{
 }
 
 .clear-news{
-    background-color: #ec484a;
+    background-color: #c53e40;
 }
 
 .clear-news:hover{
@@ -102,7 +117,7 @@ button{
     border-radius: 10px;
 }
 
-.labels{
+.fieldset-labels{
     display:grid;
     grid-template-areas: 
     "one two"
