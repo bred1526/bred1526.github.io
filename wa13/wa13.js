@@ -196,21 +196,27 @@ const saveButton = document.querySelector(".save-news").addEventListener('click'
 function saveArticle(){
 
 
-    saveArr.push(currentArticle);
 
-    // console.log(joke_arr[0].setup);
-    // console.log(joke_arr[0].punchline);
-    
-for(i=0; i<saveArr.length; i++)
-{
-    console.log("save position:" + i);
-    console.log(saveArr[i]);
-}
+    if(currentArticle != '')
+    {
+
+        saveArr.push(currentArticle);
+
+        // console.log(joke_arr[0].setup);
+        // console.log(joke_arr[0].punchline);
+        
+        for(i=0; i<saveArr.length; i++)
+        {
+            console.log("save position:" + i);
+            console.log(saveArr[i]);
+        }
 
 
-    localStorage.setItem('saveArr', JSON.stringify(saveArr));
-    
-    console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
+        localStorage.setItem('saveArr', JSON.stringify(saveArr));
+        
+        console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
+
+    }
 }
 
 loadBTN = document.querySelector(".load-news").addEventListener("click", loadArticle);
@@ -220,7 +226,7 @@ function loadArticle(){
     
     console.log("loadArticle Triggered");
     let json = JSON.parse(localStorage.getItem("saveArr")) || [];
-
+    div.innerHTML = '';
 
 
     for(i=0; i<json.length ;i++)
@@ -278,8 +284,8 @@ function loadArticle(){
 const clearButton = document.querySelector(".clear-news").addEventListener('click', clearStorage);
 
 function clearStorage(){
-    localStorage.setItem("articleArr", []);
+    localStorage.setItem("saveArr", []);
     console.log("Storage Cleared:");
-    console.log(localStorage.getItem("articleArr"))
+    console.log(localStorage.getItem("saveArr"))
     div.innerHTML="<h1>Saved News</h1>";
 }
