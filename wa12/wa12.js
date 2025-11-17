@@ -214,12 +214,12 @@ for(i=0; i<saveArr.length; i++)
 }
 
 loadBTN = document.querySelector(".load-news").addEventListener("click", loadArticle);
+const div = document.querySelector(".saved-display");
 
 function loadArticle(){
     
     console.log("loadArticle Triggered");
     let json = JSON.parse(localStorage.getItem("saveArr")) || [];
-    const div = document.querySelector(".saved-display");
 
 
 
@@ -247,7 +247,7 @@ function loadArticle(){
 
         <h2>Content Preview:</h2>
         <p>${json[i].content}</p>
-        <br>
+        <br><br>
         `;
 
         div.appendChild(hd);
@@ -281,4 +281,5 @@ function clearStorage(){
     localStorage.setItem("articleArr", []);
     console.log("Storage Cleared:");
     console.log(localStorage.getItem("articleArr"))
+    div.innerHTML="<h1>Saved News</h1>";
 }

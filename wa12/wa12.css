@@ -24,10 +24,12 @@ h2{
 
 body{background-image: url(img/paper.webp);
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;      
 min-height: 60vh;
 transition:all 1s;
+padding-top:50px;
 }
 
 label{padding:20px; background-color: rgb(247, 247, 247);}
@@ -92,6 +94,7 @@ button{
 
 .saved-display{
     background-color: white; 
+    padding:20px;
     display: flex; 
     flex-direction:column;
     box-shadow: 0px 0px 20px black;
