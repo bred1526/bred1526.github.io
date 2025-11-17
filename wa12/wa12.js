@@ -213,17 +213,22 @@ for(i=0; i<saveArr.length; i++)
     console.log(localStorage.getItem("saveArr") + "===LOCAL STORAGE PULLED===");
 }
 
-
+loadBTN = document.querySelector(".load-news").addEventListener("click", loadArticle);
 
 function loadArticle(){
     
-    let json = JSON.parse(localStorage.getItem("articleArr")) || [];
-    const node = document.createElement("div");
+    console.log("loadArticle Triggered");
+    let json = JSON.parse(localStorage.getItem("saveArr")) || [];
+    const div = document.querySelector(".saved-display");
+
+
 
     for(i=0; i<json.length ;i++)
     {
+        hd = document.createElement('div');
 
-        const textNode = document.createTextNode(`
+        hd.innerHTML = `
+        <br>
         <h2>Title</h2>
         <p>${json[i].title}</p>
 
@@ -242,11 +247,11 @@ function loadArticle(){
 
         <h2>Content Preview:</h2>
         <p>${json[i].content}</p>
-        `);
+        <br>
+        `;
 
-        node.appendChild(textNode);
+        div.appendChild(hd);
         
-
         // display.innerHTML = `
         // <h2>Title</h2>
         // <p>${json.title}</p>

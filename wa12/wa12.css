@@ -90,6 +90,15 @@ button{
     border-radius: 10px;
 }
 
+.saved-display{
+    background-color: white; 
+    display: flex; 
+    flex-direction:column;
+    box-shadow: 0px 0px 20px black;
+    width:50%;
+    border-radius: 10px;
+}
+
 .labels{
     display:grid;
     grid-template-areas: 
