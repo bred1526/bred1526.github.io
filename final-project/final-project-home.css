@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /* background-color: black; */
+}
+
+h1{
+    font-size: 2.25rem;
+    padding-top: .66666666666rem;
+}
+
+h2{
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+h3{
+    font-size: 1.75rem;
+    padding-top: 1.25rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    padding-top: 1.542rem;
+}
+
+h5{
+    font-size: 1.25rem;
+    padding-top: 1.8334rem;
+}
+
+h6{
+    font-size: 1.15rem;
+    padding-top: 1.9589rem;
+}
+
+p{
+    font-size: 1rem;
+    padding-top: 2.0835rem;
+}
+
+body,html{height:100%;}
+
+body.night{
+    background-image: url(img/night.webp);
+    background-color: #000000;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+body.day{
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+}
+
+main{
+    /* background-color: black; */
+    grid-area: main;
+    padding:20px;
+}
+
+.page-title{
+    text-align: center;
+    padding-bottom: 2.0835rem;
+}
+
+.page-summary{
+    padding-bottom: 2.0835rem;
+    padding-left: 2.0835rem;
+    padding-right: 2.0835rem;
+    border-radius: 20px;
+    transition: all .33s;
+}
+
+.page-summary.night{
+    background-color: #000000a4;
+}
+
+.page-summary.day{
+    background-color: #39d9f57d;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    grid-area: up;
+    transition: all .33s;
+}
+
+.name.night{
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 0px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
+}
+
+.name.day{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 0px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+}
+
+/* nav{
+    display: flex;
+    background-color: rgb(215, 215, 215);
+    padding:20px;
+    grid-area:nav;
+} */
+
+/* .nav-head{
+padding:20px;
+text-align: center;
+} */
+
+.theme-button{
+    width:70px;
+    height:70px;
+    position:fixed;
+    top: 15px;
+    right:15px;
+    border-radius: 20px;
+    border: solid 5px #f5c239;
+    transition: all .33s;
+}
+
+.theme-button:hover{
+    width:73px;
+    height:73px;
+    border: solid 2px #f5c239;
+}
+
+.theme-button.night{
+    background-image: url(img/moon-clip-art.jpg);
+    background-size: cover;
+}
+
+.theme-button.day{
+    background-image: url(img/sun-clip-art.png);
+    background-size: cover;
+}
+
+a{
+    transition: all .33s;
+}
+
+a.night{
+    color:white;
+    transition: all .33s;
+}
+
+a.day{
+    color:rgb(0, 0, 0);
+    transition: all .33s;
+}
+/* a:visited{
+    
+} */
+
+a:hover{
+    color:rgb(224, 151, 255);
+}
+
+.name{
+    padding:20px;
+}
+
+.nav-grid{
+    padding:20px;
+    margin:20px;
+    display: grid;
+    justify-self: center;
+    /* background-color: white; */
+}
+
+img{
+    transition: all .33s;
+}
+
+@media (max-width:1080px){
+
+    body{background-size: contain;}
+
+    ul{
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-grid{grid-template: 
+        "one two"
+        "three four"
+        ;}
+
+    img.night{
+        box-shadow: 0px 0px 0px 20px rgb(255, 255, 255); 
+        width:30vw;
+        border-radius: 20px;
+        transition: all .33s;
+    }
+
+    img.day{
+        box-shadow: 0px 0px 0px 20px rgb(0, 0, 0); 
+        width:30vw;
+        border-radius: 20px;
+        transition: all .33s;
+    }
+
+    img:hover{
+        width:31vw;
+        box-shadow: 0px 0px 0px 15px rgb(224, 151, 255); 
+    }
+
+    #about-image{
+        padding-left:5vw;
+        padding-right:5vw;
+        padding-top: 5vw;
+        text-align: center;
+    }
+
+    #contact-image{
+        padding-left:5vw;
+        padding-right:5vw;
+        padding-top: 5vw;
+        text-align: center;
+    }
+
+    #projects-image{
+        padding-left:5vw;
+        padding-right:5vw;
+        padding-top: 5vw;
+        text-align: center;
+    }
+
+    #resume-image{
+        padding-left:5vw;
+        padding-right:5vw;
+        padding-top: 5vw;
+        text-align: center;
+    }
+
+    .nav-head{
+        padding-bottom:5vw;
+        padding-top:5vw;
+    }
+
+}
+
+@media (min-width:1080px){
+    
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-grid{grid-template:
+        "one two three four"
+        ;}
+
+    img.night{
+        box-shadow: 0px 0px 0px 20px rgb(255, 255, 255); 
+        width:20vw;
+        border-radius: 20px;
+        transition: all .33s;
+    }
+
+    img.day{
+        box-shadow: 0px 0px 0px 20px rgb(0, 0, 0); 
+        width:20vw;
+        border-radius: 20px;
+        transition: all .33s;
+    }
+
+    img:hover{
+        width:21vw;
+        box-shadow: 0px 0px 0px 15px rgb(224, 151, 255); 
+    }
+
+    #about-image{
+        padding-left:2vw;
+        padding-right:2vw;
+        text-align: center;
+    }
+
+    #contact-image{
+        padding-left:2vw;
+        padding-right:2vw;
+        text-align: center;
+    }
+
+    #projects-image{
+        padding-left:2vw;
+        padding-right:2vw;
+        text-align: center;
+    }
+
+    #resume-image{
+        padding-left:2vw;
+        padding-right:2vw;
+        text-align: center;
+    }
+
+    .nav-head{
+        padding-bottom:2vw;
+    }
+}
+
+footer{
+    /* display: flex; */
+    position:fixed;
+    width:100%;
+    bottom:0;
+    left:0;
+    text-align: center;
+    padding-bottom:5px;
+    transition: all .33s;
+}
+
+footer.night{
+    background-color: black;
+    color:white;
+}
+
+footer.day{
+    background-color: white;
+    color: black;
+}
+
+.data-clear{
+    display:flex;
+    justify-self:center;
+    background-color:rgb(224, 151, 255);
+    border-radius: 10px;
+    padding:10px;
+    border-color: solid 3px black;
+    transition: all .33s;
+}
+
+.data-clear:hover{
+    font-size: 1.1rem;
+}
